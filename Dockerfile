@@ -13,8 +13,8 @@ FROM node:lts as runner
 WORKDIR /CPproj
 ENV NODE_ENV production
 
-COPY --from=builder /CPproj/public ./public
-COPY --from=builder /CPproj/package.json ./package.json
+COPY --from=builder /public ./public
+COPY --from=builder /package.json ./package.json
 COPY --from=builder /CPproj/.next ./.next
 COPY --from=builder /CPproj/node_modules ./node_modules
 
