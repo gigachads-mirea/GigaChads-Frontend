@@ -12,6 +12,7 @@ export default function Home() {
             </Head>
             <main>
                 <h1>Hello, world!</h1>
+                <div>test</div>
             </main>
         </>
     )
