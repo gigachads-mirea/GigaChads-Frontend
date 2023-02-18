@@ -12,7 +12,7 @@ export default function Home() {
             </Head>
             <main>
                 <h1>Hello, world!</h1>
-                <div>test 2</div>
+                <p>Наконец-то настроил CI/CD</p>
             </main>
         </>
     )
