@@ -9,23 +9,8 @@ on:
       - '*'
 
 jobs:
-  test:
-    name: Build & Test
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.12.0'
-          cache: 'npm'
-
-      - name: yarn install, build, and test
-        run: |
-          npm install yarn
-          yarn
-          yarn build
-          yarn test
+  build-and-test:
+    uses: gigachads-mirea/Gigachads-Frontend/.github/workflows/build-and-test.yml@master
 
   docker:
     name: Publish - Docker Hub
