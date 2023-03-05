@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - 'master'
-  pull_request:
-    branches:
-      - '*'
 
 jobs:
   build-and-test:
@@ -15,7 +12,7 @@ jobs:
   docker:
     name: Publish - Docker Hub
     runs-on: ubuntu-20.04
-    needs: [ test ]
+    needs: [ build-and-test ]
     env:
       REPO: ${{ secrets.DOCKER_REPO }}
     steps:
