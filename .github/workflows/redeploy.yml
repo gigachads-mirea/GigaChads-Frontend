@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     name: Build & Test
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - name: Set up Node.js
@@ -29,7 +29,7 @@ jobs:
 
   docker:
     name: Publish - Docker Hub
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: [ test ]
     env:
       REPO: ${{ secrets.DOCKER_REPO }}
@@ -45,7 +45,7 @@ jobs:
 
   redeploy:
     name: Redeploy webhook call
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: [ docker ]
     steps:
       - name: Deploy docker container webhook
