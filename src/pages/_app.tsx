@@ -2,7 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {NextUIProvider} from '@nextui-org/react';
 
-import {store} from '../app/store/store';
+import {store} from '../config/store/store';
 
 import type {AppProps} from 'next/app';
 

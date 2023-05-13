@@ -36,9 +36,13 @@
     "prefer-arrow-functions"
   ],
   "ignorePatterns": [
-    "config/", ".next/", "node_modules/", ".github/"
+    "config/",
+    ".next/",
+    "node_modules/",
+    ".github/"
   ],
   "rules": {
+    "import/no-unresolved": "off",
     "indent": [
       "error",
       "tab"

@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import {Input} from '@nextui-org/react';
+import {Button, Input} from '@nextui-org/react';
 
-import {useGetUserQuery} from '../utils/testQuery';
+import {useGetUserQuery} from '../config/utils/testQuery';
 
 export default () => {
 	const {data} = useGetUserQuery();
@@ -18,6 +18,7 @@ export default () => {
 				<h1>Hello, world!</h1>
 				<p>Наконец-то настроил CI/CD</p>
 				<Input/>
+				<Button color={'gradient'} shadow={true}>fds</Button>
 				<div>{JSON.stringify(data)}</div>
 			</main>
 		</>
