@@ -1,7 +1,11 @@
-<h1>Тут будет крутое название</h1>
-Тут будет крутое описание
-<ol>
-<li>Крутая фича</li>
-<li>Тут тоже будет всё круто</li>
-<li>И вообще всё будет хорошо</li>
-</ol>
+# GigaChads — Frontend
+
+## Libraries
+
+🎨 UI Components: [NextUI](https://nextui.org/)  
+🛠 Framework: [NextJS](https://nextjs.org/)
+
+## Contributors
+
+🤪 [Baikin Kirill](@baikinkirill)  
+🤡 [Krotov Petr](@krotovpetr)
