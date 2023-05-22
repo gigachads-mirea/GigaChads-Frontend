@@ -1,11 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
-import {Button, Input} from '@nextui-org/react';
+import {Button, Container, Grid, Input} from '@nextui-org/react';
 
 import {useGetUserQuery} from '../config/utils/testQuery';
+import Header from '../components/Header/header';
+import CustomDropdown from '../components/Dropdown/customDropdown';
+import ServerCards from '../components/ServerCards/serverCards';
 
 export default () => {
-	const {data} = useGetUserQuery();
+
 
 	return (
 		<>
@@ -15,11 +18,18 @@ export default () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1"/>
 			</Head>
 			<main>
-				<h1>Hello, world!</h1>
-				<p>Наконец-то настроил CI/CD</p>
-				<Input/>
-				<Button color={'gradient'} shadow={true}>fds</Button>
-				<div>{JSON.stringify(data)}</div>
+				<Header/>
+				<Container fluid justify={'space-around'} alignItems={'center'} direction={'row'}>
+					<CustomDropdown/>
+					<Input placeholder="Find your server"/>
+				</Container>
+				<ServerCards/>
+				{/*{*/}
+				{/*	data && JSON.parse(data).map((cardInfo: any)=>{*/}
+				{/*	return <ServerCards data={cardInfo}/>*/}
+				{/*})*/}
+				{/*}*/}
+				{/*<Button color={'gradient'} shadow={true}>fds</Button>*/}
 			</main>
 		</>
 	);
