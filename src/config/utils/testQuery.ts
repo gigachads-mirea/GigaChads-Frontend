@@ -4,7 +4,7 @@ const AuthApi = api.injectEndpoints({
 	endpoints: (builder) => ({
 		getUser: builder.query<undefined, void>({
 			query: () => ({
-				url: 'https://pokeapi.co/api/v2/pokemon/pikachu',
+				url: '/servers',
 				method: 'GET',
 			}),
 			providesTags: ['user'],

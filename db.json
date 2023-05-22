@@ -1,0 +1,88 @@
+{
+  "servers": [
+    {
+      "id": 1,
+      "owner": "Kopatych2002",
+      "ipAddress": "127.0.0.1",
+      "capacity": 4000,
+      "currentOnline": 27,
+      "region": "RU",
+      "ping": 67,
+      "antiCheat": true,
+      "isModded": true,
+      "rating": 4.1,
+      "game": "Krunker",
+      "validated": true
+    },
+    {
+      "id": 2,
+      "owner": "Mikhail Ignatyich",
+      "ipAddress": "127.0.0.2",
+      "capacity": 4000,
+      "currentOnline": 27,
+      "region": "RU",
+      "ping": 67,
+      "antiCheat": true,
+      "isModded": true,
+      "rating": 4.1,
+      "game": "Enlisted",
+      "validated": true
+    },
+    {
+      "id": 3,
+      "owner": "Kopatych2002",
+      "ipAddress": "127.0.0.3",
+      "capacity": 4000,
+      "currentOnline": 27,
+      "region": "RU",
+      "ping": 67,
+      "antiCheat": true,
+      "isModded": true,
+      "rating": 4.1,
+      "game": "Minecraft",
+      "validated": true
+    },
+    {
+      "id": 4,
+      "owner": "Kopatych2002",
+      "ipAddress": "127.0.0.4",
+      "capacity": 4000,
+      "currentOnline": 27,
+      "region": "RU",
+      "ping": 67,
+      "antiCheat": true,
+      "isModded": true,
+      "rating": 4.1,
+      "game": "Minecraft",
+      "validated": true
+    },
+    {
+      "id": 5,
+      "owner": "Kopatych2002",
+      "ipAddress": "127.0.0.5",
+      "capacity": 4000,
+      "currentOnline": 27,
+      "region": "RU",
+      "ping": 67,
+      "antiCheat": true,
+      "isModded": true,
+      "rating": 4.1,
+      "game": "GTA4",
+      "validated": true
+    },
+    {
+      "id": 6,
+      "owner": "Kopatych2002",
+      "ipAddress": "127.0.0.6",
+      "capacity": 4000,
+      "currentOnline": 27,
+      "region": "RU",
+      "ping": 22,
+      "antiCheat": true,
+      "isModded": true,
+      "rating": 4.1,
+      "game": "Krunker",
+      "validated": false
+    }
+  ]
+}

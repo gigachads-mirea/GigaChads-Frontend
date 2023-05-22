@@ -34,7 +34,7 @@ const axiosBaseQuery = ({baseUrl}: { baseUrl: string } = {baseUrl: ''}): BaseQue
 		return result;
 	};
 
-const baseQuery = axiosBaseQuery({baseUrl: process.env.REACT_APP_API_URL ?? ''});
+const baseQuery = axiosBaseQuery({baseUrl: 'http://localhost:5000'  ?? ''});
 const baseQueryWithRetry = retry(baseQuery, {maxRetries: 3});
 
 export const api = createApi({
