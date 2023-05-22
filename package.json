@@ -6,7 +6,7 @@
   "author": "Krotov Petr <83280920+KrotovPetr@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev & json-server db.json --port 5000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -17,10 +17,13 @@
     "@nextui-org/react": "^1.0.0-beta.12",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
+    "json-server": "0.17.3",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-redux": "^8.0.5"
+    "react-hook-form": "^7.43.9",
+    "react-redux": "^8.0.5",
+    "sass": "^1.62.1"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "13.2.1",

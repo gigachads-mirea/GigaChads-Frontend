@@ -1,19 +1,19 @@
-import {createApi, retry} from '@reduxjs/toolkit/query/react';
-import axios from 'axios';
-
-import type {AxiosError, AxiosRequestConfig} from 'axios';
 import type {BaseQueryFn} from '@reduxjs/toolkit/query/react';
+import {createApi, retry} from '@reduxjs/toolkit/query/react';
+import type {AxiosError, AxiosRequestConfig} from 'axios';
+import axios from 'axios';
+import {API_URL} from '../../utils/constants';
 
 interface IAxiosBaseQueryArgs {
-    url: string
-    method: AxiosRequestConfig['method']
-    data?: AxiosRequestConfig['data']
-    params?: AxiosRequestConfig['params']
+	url: string;
+	method: AxiosRequestConfig['method'];
+	data?: AxiosRequestConfig['data'];
+	params?: AxiosRequestConfig['params'];
 }
 
 interface IAxiosBaseQueryError {
-    status?: number;
-    data?: unknown
+	status?: number;
+	data?: unknown;
 }
 
 const axiosBaseQuery = ({baseUrl}: { baseUrl: string } = {baseUrl: ''}): BaseQueryFn<IAxiosBaseQueryArgs, unknown, IAxiosBaseQueryError> =>
@@ -34,13 +34,13 @@ const axiosBaseQuery = ({baseUrl}: { baseUrl: string } = {baseUrl: ''}): BaseQue
 		return result;
 	};
 
-const baseQuery = axiosBaseQuery({baseUrl: 'http://localhost:5000'  ?? ''});
+const baseQuery = axiosBaseQuery({baseUrl: API_URL});
 const baseQueryWithRetry = retry(baseQuery, {maxRetries: 3});
 
 export const api = createApi({
 	reducerPath: 'api',
 	baseQuery: baseQueryWithRetry,
-	tagTypes: ['user', 'article'],
+	tagTypes: ['server', 'article'],
 	endpoints: () => ({}),
 });
 
