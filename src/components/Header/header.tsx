@@ -21,10 +21,10 @@ const Header = () => {
 				</Navbar.Brand>
 
 				<Navbar.Content hideIn="xs">
-					<Navbar.Link href="#">Features</Navbar.Link>
-					<Navbar.Link isActive href="#">Customers</Navbar.Link>
-					<Navbar.Link href="#">Pricing</Navbar.Link>
-					<Navbar.Link href="#">Company</Navbar.Link>
+					<Navbar.Link href="/#">Servers</Navbar.Link>
+					<Navbar.Link href="/form">Create</Navbar.Link>
+					<Navbar.Link href="#">Compare</Navbar.Link>
+					<Navbar.Link href="/account">Account(aka Favourite)</Navbar.Link>
 				</Navbar.Content>
 				<Navbar.Content>
 					<Navbar.Item>

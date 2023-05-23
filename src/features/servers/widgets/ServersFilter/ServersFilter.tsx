@@ -8,13 +8,13 @@ export const ServersFilter: React.FC<IServersFilterProps> = () => {
 		<div className={styles.ServersFilter}>
 			<Input clearable placeholder={'Начните вводить'} css={{width: '100%'}}/>
 			<Tooltip placement={'bottom'} content={<Text css={{p: '$10'}}>Тут будут фильтры</Text>}>
-				<Button>Наведи на меня 😉</Button>
+				<Button>Наведи на меня </Button>
 			</Tooltip>
 			<Tooltip
 				placement={'bottom'}
 				content={<Text css={{p: '$10'}}>Тут тоже, а еще справа</Text>}
 			>
-				<Button>И на меня 😘</Button>
+				<Button>И на меня </Button>
 			</Tooltip>
 		</div>
 	);
