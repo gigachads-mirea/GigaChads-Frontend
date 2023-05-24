@@ -4,6 +4,14 @@ import {IServer} from '../../../config/types';
 const AuthApi = api.injectEndpoints({
 	endpoints: (builder) => ({
 		getServersList: builder.query<IServer[], void>({
+			query: (params) => ({
+				url: '/servers',
+				method: 'GET',
+				params: params
+			}),
+			providesTags: ['server'],
+		}),
+		getFullServersList: builder.query<IServer[], void>({
 			query: () => ({
 				url: '/servers',
 				method: 'GET',
@@ -21,4 +29,4 @@ const AuthApi = api.injectEndpoints({
 	})
 });
 
-export const {useGetServersListQuery, useGetProfileInfoQuery} = AuthApi;
+export const {useGetServersListQuery, useGetFullServersListQuery, useGetProfileInfoQuery} = AuthApi;

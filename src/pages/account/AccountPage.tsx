@@ -5,6 +5,7 @@ import UserServers from '../../components/UserServers/userServers';
 import FavServers from '../../components/FavServers/favServers';
 import Profile from '../../components/Profile/profile';
 import { useGetProfileInfoQuery } from '../../features/servers/queries';
+
 export const AccountPage = () => {
 	const {data} = useGetProfileInfoQuery({id: 1});
 	return (

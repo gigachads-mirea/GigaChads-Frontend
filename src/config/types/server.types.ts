@@ -1,4 +1,6 @@
 export interface IServer {
+    url: ReactNode;
+    name: ReactNode;
 	id: number;
 	owner: string;
 	ipAddress: string;

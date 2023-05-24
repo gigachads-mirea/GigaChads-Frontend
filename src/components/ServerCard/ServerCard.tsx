@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Card, Grid, Row, Text} from '@nextui-org/react';
 import {IServer} from '../../config/types';
+import Link from 'next/link';
 
 const ServerCard = (props: { server: IServer }) => {
 	return (
@@ -45,10 +46,10 @@ const ServerCard = (props: { server: IServer }) => {
 				<Card.Divider/>
 				<Card.Footer>
 					<Row justify="flex-end">
-						<Button size="sm" light>
+						<Button size="sm" light auto as={Link} >
 							Share
 						</Button>
-						<Button size="sm" color="primary">
+						<Button size="sm" color="primary" >
 							Learn more
 						</Button>
 					</Row>
