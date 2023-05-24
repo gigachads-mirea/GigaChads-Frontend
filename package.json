@@ -6,7 +6,8 @@
   "author": "Krotov Petr <83280920+KrotovPetr@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev & json-server db.json --port 5000",
+    "dev": "next dev",
+    "json": " json-server db.json --port 5000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

@@ -84,5 +84,41 @@
       "game": "Krunker",
       "validated": false
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "login": "aboba abobov",
+      "email": "abobov@mail.ru",
+      "servers": [{
+        "id": 6,
+        "owner": "Kopatych2002",
+        "ipAddress": "127.0.0.6",
+        "capacity": 4000,
+        "currentOnline": 27,
+        "region": "RU",
+        "ping": 22,
+        "antiCheat": true,
+        "isModded": true,
+        "rating": 4.1,
+        "game": "Krunker",
+        "validated": false
+      }],
+      "favServers": [{
+        "id": 4,
+        "owner": "Kopatych2002",
+        "ipAddress": "127.0.0.4",
+        "capacity": 4000,
+        "currentOnline": 27,
+        "region": "RU",
+        "ping": 67,
+        "antiCheat": true,
+        "isModded": true,
+        "rating": 4.1,
+        "game": "Minecraft",
+        "validated": true
+      }
+      ]
+    }
   ]
 }

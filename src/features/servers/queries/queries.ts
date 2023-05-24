@@ -10,7 +10,15 @@ const AuthApi = api.injectEndpoints({
 			}),
 			providesTags: ['server'],
 		}),
+		getProfileInfo: builder.query<IServer[], any>({
+			query: (params) => ({
+				url: '/users',
+				method: 'GET',
+				params: params
+			}),
+			providesTags: ['server'],
+		}),
 	})
 });
 
-export const {useGetServersListQuery} = AuthApi;
+export const {useGetServersListQuery, useGetProfileInfoQuery} = AuthApi;
