@@ -2,13 +2,15 @@ import React from 'react';
 import {ServersList} from '../ServersList/ServersList';
 import {ServersFilter} from '../ServersFilter/ServersFilter';
 import styles from './Servers.module.scss';
-import {useGetFullServersListQuery} from '../../queries';
+import {useGetServersListQuery} from '../../queries';
+import {FILTER_DEFAULT_VALUE} from '../ServersFilter/ServersFilter.constants';
 
 export const Servers = () => {
-	const {data: servers} = useGetFullServersListQuery(null);
+	const [filter, setFilter] = React.useState(FILTER_DEFAULT_VALUE);
+	const {data: servers} = useGetServersListQuery({filter});
 	return (
 		<div className={styles.Servers}>
-			<ServersFilter/>
+			<ServersFilter onChange={setFilter}/>
 			<ServersList servers={servers}/>
 		</div>
 	);

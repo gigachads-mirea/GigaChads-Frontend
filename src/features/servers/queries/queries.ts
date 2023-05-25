@@ -1,22 +1,34 @@
 import {api} from '../../../config/store/api';
 import {IServer} from '../../../config/types';
+import {IFilterValue} from '../widgets/ServersFilter/ServersFilter.types';
 
 const AuthApi = api.injectEndpoints({
 	endpoints: (builder) => ({
-		getServersList: builder.query<IServer[], void>({
-			query: (params) => ({
+		getServersList: builder.query<IServer[], { filter?: IFilterValue }>({
+			query: (arg) => ({
 				url: '/servers',
 				method: 'GET',
-				params: params
+				params: {
+					'name_like': arg.filter?.name,
+					'id': arg.filter?.id
+				}
 			}),
 			providesTags: ['server'],
 		}),
-		getFullServersList: builder.query<IServer[], void>({
-			query: () => ({
-				url: '/servers/all',
-				method: 'GET',
+		createServer: builder.mutation<any, any>({
+			query: (params) => ({
+				url: '/servers',
+				method: 'POST',
+				data: params
 			}),
-			providesTags: ['server'],
+			invalidatesTags: ['server']
+		}),
+		deleteServer: builder.mutation<any, any>({
+			query: (arg) => ({
+				url: '/servers/' + arg,
+				method: 'DELETE',
+			}),
+			invalidatesTags: ['server']
 		}),
 		getProfileInfo: builder.query<IServer[], any>({
 			query: (params) => ({
@@ -28,29 +40,62 @@ const AuthApi = api.injectEndpoints({
 		}),
 		addServerToFavouriteList: builder.mutation<any, any>({
 			query: (params) => ({
-				url: '/favServer',
-				method: 'PATCH',
-				body: params
+				url: '/favourites',
+				method: 'POST',
+				data: {SID: params}
 			}),
 			invalidatesTags: ['server']
 		}),
-		deleteServerFromList: builder.mutation<any, any>({
-			query: (params) => ({
-				url: '/servers/'+params.id,
+		deleteServerFromFavouriteList: builder.mutation<any, any>({
+			query: (arg) => ({
+				url: '/favourites/' + arg,
 				method: 'DELETE',
 			}),
 			invalidatesTags: ['server']
 		}),
-		updateUserServersList: builder.mutation<IServer[], any>({
+		getFavourites: builder.query<any, any>({
+			query: (arg) => ({
+				url: '/favourites/',
+				method: 'GET',
+				params: arg && {SID: arg}
+			}),
+			providesTags: ['server'],
+		}),
+		addServerToOwnList: builder.mutation<any, any>({
 			query: (params) => ({
-				url: '/users/'+params.id,
-				method: 'PUT',
-				body: {...params.body}//<----ошибка тут, посмотреть
+				url: '/own',
+				method: 'POST',
+				data: {SID: params}
 			}),
 			invalidatesTags: ['server']
+		}),
+		deleteServerFromOwnList: builder.mutation<any, any>({
+			query: (arg) => ({
+				url: '/own/' + arg,
+				method: 'DELETE',
+			}),
+			invalidatesTags: ['server']
+		}),
+		getOwns: builder.query<any, any>({
+			query: (arg) => ({
+				url: '/own/' + arg,
+				method: 'GET',
+			}),
+			providesTags: ['server'],
 		}),
 
 	})
 });
 
-export const {useGetServersListQuery, useGetFullServersListQuery, useGetProfileInfoQuery, useAddServerToFavouriteListMutation, useDeleteServerFromListMutation, useUpdateUserServersListMutation} = AuthApi;
+export const {
+	useGetServersListQuery,
+	useGetProfileInfoQuery,
+	useAddServerToFavouriteListMutation,
+	useDeleteServerFromFavouriteListMutation,
+	useGetFavouritesQuery,
+	useGetOwnsQuery,
+	useDeleteServerFromOwnListMutation,
+	useAddServerToOwnListMutation,
+	useDeleteServerMutation,
+	useCreateServerMutation
+} = AuthApi;

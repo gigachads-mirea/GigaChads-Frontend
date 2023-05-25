@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "json": " json-server db/db.json --port 5000 -r db/routes.servers.json",
+    "json": "json-server db/db.json --port 5000 -r db/routes.servers.json",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

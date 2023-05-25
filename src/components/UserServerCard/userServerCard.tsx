@@ -1,15 +1,19 @@
 import React from 'react';
 import {Button, Card, Grid, Row, Text} from '@nextui-org/react';
+import {useRouter} from 'next/router';
 
-const UserServerCard = ({elem, callback}) => {
+const UserServerCard = ({elem, deleteServer}) => {
+	const {query, push} = useRouter();
+
+	const goToPage = (pathname: string) => () => push({pathname, query});
 	return (
 		<Grid xs={8}>
-			<Card css={{ mw: "250px" }}>
+			<Card css={{mw: '250px'}}>
 				<Card.Header>
-					<Text b>Card Title</Text>
+					<Text b>{elem.name}</Text>
 				</Card.Header>
-				<Card.Divider />
-				<Card.Body css={{ py: "$10" }}>
+				<Card.Divider/>
+				<Card.Body css={{py: '$10'}}>
 					<Text>
 						Game: {elem.game}
 					</Text>
@@ -17,13 +21,13 @@ const UserServerCard = ({elem, callback}) => {
 						IP: {elem.ipAddress}
 					</Text>
 				</Card.Body>
-				<Card.Divider />
+				<Card.Divider/>
 				<Card.Footer>
 					<Row justify="flex-end">
-						<Button size="xs" light css={{color: "red"}} onClick={()=>callback(elem.id)}>
+						<Button size="xs" light css={{color: 'red'}} onClick={deleteServer}>
 							Удалить
 						</Button>
-						<Button size="xs" light css={{color: "blue"}} >
+						<Button size="xs" light css={{color: 'blue'}} onClick={goToPage('/server/' + elem.id)}>
 							Подробнее
 						</Button>
 					</Row>

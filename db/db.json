@@ -1,38 +1,6 @@
 {
   "servers": [
     {
-      "id": 1,
-      "owner": "Kopatych2002",
-      "ipAddress": "127.0.0.1",
-      "name": "Super server 101",
-      "url": "https://nextjs.org/blog/layouts-rfc",
-      "capacity": 4000,
-      "currentOnline": 27,
-      "region": "RU",
-      "ping": 67,
-      "antiCheat": true,
-      "isModded": true,
-      "rating": 4.1,
-      "game": "Krunker",
-      "validated": true
-    },
-    {
-      "id": 2,
-      "owner": "Mikhail Ignatyich",
-      "ipAddress": "127.0.0.2",
-      "name": "Super server 12",
-      "url": "https://nextjs.org/blog/layouts-rfc",
-      "capacity": 4000,
-      "currentOnline": 27,
-      "region": "RU",
-      "ping": 67,
-      "antiCheat": true,
-      "isModded": true,
-      "rating": 4.1,
-      "game": "Enlisted",
-      "validated": true
-    },
-    {
       "id": 3,
       "owner": "Kopatych2002",
       "ipAddress": "127.0.0.3",
@@ -101,43 +69,14 @@
     {
       "id": 1,
       "login": "aboba abobov",
-      "email": "abobov@mail.ru",
-      "servers": [
-        {
-          "id": 6,
-          "name": "Super server 1",
-          "owner": "Kopatych2002",
-          "url": "https://nextjs.org/blog/layouts-rfc",
-          "ipAddress": "127.0.0.6",
-          "capacity": 4000,
-          "currentOnline": 27,
-          "region": "RU",
-          "ping": 22,
-          "antiCheat": true,
-          "isModded": true,
-          "rating": 4.1,
-          "game": "Krunker",
-          "validated": false
-        }
-      ],
-      "favServers": [
-        {
-          "id": 4,
-          "owner": "Kopatych2002",
-          "name": "Super server 2",
-          "ipAddress": "127.0.0.4",
-          "url": "https://nextjs.org/blog/layouts-rfc",
-          "capacity": 4000,
-          "currentOnline": 27,
-          "region": "RU",
-          "ping": 67,
-          "antiCheat": true,
-          "isModded": true,
-          "rating": 4.1,
-          "game": "Minecraft",
-          "validated": true
-        }
-      ]
+      "email": "abobov@mail.ru"
     }
-  ]
+  ],
+  "favourites": [
+    {
+      "SID": "4",
+      "id": 1
+    }
+  ],
+  "own": []
 }

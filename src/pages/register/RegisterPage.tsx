@@ -4,8 +4,10 @@ import {Register} from '../../features/auth/widgets/Register';
 
 export const RegisterPage = () => {
 	return (
-			<PageLayout>
-				<Register/>
-			</PageLayout>
+		<PageLayout>
+			<Register/>
+		</PageLayout>
 	);
 };
+
+export default RegisterPage;
