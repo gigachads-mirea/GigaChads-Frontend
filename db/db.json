@@ -66,26 +66,26 @@
     },
     {
       "id": 5,
+      "name": "Super server 1",
       "owner": "Kopatych2002",
-      "name": "Super server 5",
-      "ipAddress": "127.0.0.5",
       "url": "https://nextjs.org/blog/layouts-rfc",
+      "ipAddress": "127.0.0.6",
       "capacity": 4000,
       "currentOnline": 27,
       "region": "RU",
-      "ping": 67,
+      "ping": 22,
       "antiCheat": true,
       "isModded": true,
       "rating": 4.1,
-      "game": "GTA4",
-      "validated": true
+      "game": "Krunker",
+      "validated": false
     },
     {
       "id": 6,
+      "name": "Super server 1",
       "owner": "Kopatych2002",
-      "name": "Super server 4",
-      "ipAddress": "127.0.0.6",
       "url": "https://nextjs.org/blog/layouts-rfc",
+      "ipAddress": "127.0.0.6",
       "capacity": 4000,
       "currentOnline": 27,
       "region": "RU",
@@ -102,38 +102,41 @@
       "id": 1,
       "login": "aboba abobov",
       "email": "abobov@mail.ru",
-      "servers": [{
-        "id": 6,
-        "name": "Super server 1",
-        "owner": "Kopatych2002",
-        "url": "https://nextjs.org/blog/layouts-rfc",
-        "ipAddress": "127.0.0.6",
-        "capacity": 4000,
-        "currentOnline": 27,
-        "region": "RU",
-        "ping": 22,
-        "antiCheat": true,
-        "isModded": true,
-        "rating": 4.1,
-        "game": "Krunker",
-        "validated": false
-      }],
-      "favServers": [{
-        "id": 4,
-        "owner": "Kopatych2002",
-        "name": "Super server 2",
-        "ipAddress": "127.0.0.4",
-        "url": "https://nextjs.org/blog/layouts-rfc",
-        "capacity": 4000,
-        "currentOnline": 27,
-        "region": "RU",
-        "ping": 67,
-        "antiCheat": true,
-        "isModded": true,
-        "rating": 4.1,
-        "game": "Minecraft",
-        "validated": true
-      }
+      "servers": [
+        {
+          "id": 6,
+          "name": "Super server 1",
+          "owner": "Kopatych2002",
+          "url": "https://nextjs.org/blog/layouts-rfc",
+          "ipAddress": "127.0.0.6",
+          "capacity": 4000,
+          "currentOnline": 27,
+          "region": "RU",
+          "ping": 22,
+          "antiCheat": true,
+          "isModded": true,
+          "rating": 4.1,
+          "game": "Krunker",
+          "validated": false
+        }
+      ],
+      "favServers": [
+        {
+          "id": 4,
+          "owner": "Kopatych2002",
+          "name": "Super server 2",
+          "ipAddress": "127.0.0.4",
+          "url": "https://nextjs.org/blog/layouts-rfc",
+          "capacity": 4000,
+          "currentOnline": 27,
+          "region": "RU",
+          "ping": 67,
+          "antiCheat": true,
+          "isModded": true,
+          "rating": 4.1,
+          "game": "Minecraft",
+          "validated": true
+        }
       ]
     }
   ]

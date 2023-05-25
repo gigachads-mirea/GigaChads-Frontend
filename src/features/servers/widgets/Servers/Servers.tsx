@@ -5,8 +5,7 @@ import styles from './Servers.module.scss';
 import {useGetFullServersListQuery} from '../../queries';
 
 export const Servers = () => {
-	const {data: servers} = useGetFullServersListQuery(); //<-----ошибка тут (подправить параметры)
-
+	const {data: servers} = useGetFullServersListQuery(null);
 	return (
 		<div className={styles.Servers}>
 			<ServersFilter/>

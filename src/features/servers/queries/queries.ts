@@ -13,7 +13,7 @@ const AuthApi = api.injectEndpoints({
 		}),
 		getFullServersList: builder.query<IServer[], void>({
 			query: () => ({
-				url: '/servers',
+				url: '/servers/all',
 				method: 'GET',
 			}),
 			providesTags: ['server'],
@@ -26,7 +26,31 @@ const AuthApi = api.injectEndpoints({
 			}),
 			providesTags: ['server'],
 		}),
+		addServerToFavouriteList: builder.mutation<any, any>({
+			query: (params) => ({
+				url: '/favServer',
+				method: 'PATCH',
+				body: params
+			}),
+			invalidatesTags: ['server']
+		}),
+		deleteServerFromList: builder.mutation<any, any>({
+			query: (params) => ({
+				url: '/servers/'+params.id,
+				method: 'DELETE',
+			}),
+			invalidatesTags: ['server']
+		}),
+		updateUserServersList: builder.mutation<IServer[], any>({
+			query: (params) => ({
+				url: '/users/'+params.id,
+				method: 'PUT',
+				body: {...params.body}//<----ошибка тут, посмотреть
+			}),
+			invalidatesTags: ['server']
+		}),
+
 	})
 });
 
-export const {useGetServersListQuery, useGetFullServersListQuery, useGetProfileInfoQuery} = AuthApi;
+export const {useGetServersListQuery, useGetFullServersListQuery, useGetProfileInfoQuery, useAddServerToFavouriteListMutation, useDeleteServerFromListMutation, useUpdateUserServersListMutation} = AuthApi;

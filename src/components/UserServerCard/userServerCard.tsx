@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Card, Grid, Row, Text} from '@nextui-org/react';
 
-const UserServerCard = ({elem}) => {
+const UserServerCard = ({elem, callback}) => {
 	return (
 		<Grid xs={8}>
 			<Card css={{ mw: "250px" }}>
@@ -20,7 +20,7 @@ const UserServerCard = ({elem}) => {
 				<Card.Divider />
 				<Card.Footer>
 					<Row justify="flex-end">
-						<Button size="xs" light css={{color: "red"}} >
+						<Button size="xs" light css={{color: "red"}} onClick={()=>callback(elem.id)}>
 							Удалить
 						</Button>
 						<Button size="xs" light css={{color: "blue"}} >

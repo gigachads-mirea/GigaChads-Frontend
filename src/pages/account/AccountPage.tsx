@@ -11,8 +11,8 @@ export const AccountPage = () => {
 	return (
 		<PageLayout>
 			<Grid.Container gap={2} justify="center">
-				<UserServers data={data ? data[0].servers : []}/>
-				<FavServers data={data ? data[0].favServers : []}/>
+				<UserServers data={data ? data[0].servers : []} user={data ? data[0] : []}/>
+				<FavServers data={data ? data[0].favServers : []} user={data ? data[0] : []}/>
 				<Profile data={data}/>
 			</Grid.Container>
 		</PageLayout>

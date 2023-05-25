@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Image, Navbar, Text} from '@nextui-org/react';
+import {Button, Navbar, Text, Image} from '@nextui-org/react';
 import {Layout} from '../Layout/layout';
 import Link from 'next/link';
 
@@ -11,10 +11,11 @@ const Header = () => {
 					<Image
 						width={100}
 						height={40}
-						src="https://github.com/nextui-org/nextui/blob/next/apps/docs/public/nextui-banner.jpeg?raw=true"
+						src={'../../utils/Images/Logo.png'}
 						alt="Default Image"
 						objectFit="cover"
 					/>
+
 					<Text b color="inherit" hideIn="xs">
 						Gigachads
 					</Text>
