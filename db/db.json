@@ -1,15 +1,18 @@
 {
-  "servers": [{
-    "id": 1,
-    "approved": false
-  },
+  "servers": [
+    {
+      "id": 1,
+      "approved": true
+    },
     {
       "id": 2,
       "approved": true
-    },{
+    },
+    {
       "id": 3,
-      "approved": false
-    }],
+      "approved": true
+    }
+  ],
   "users": [
     {
       "id": 1,

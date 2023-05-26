@@ -13,7 +13,7 @@ export const AdminProfilePage = () => {
 	console.log(data)
 
 	const goToPage = (pathname: string) => () => push({pathname, query});
-	const approveServer = (id) => {modifyServer({id: id, body: {approved: true}})};
+	const approveServer = (id) => {modifyServer({id: id, body: {id: id, approved: true}})};
 
 	return (
 			<PageLayout>

@@ -113,9 +113,9 @@ const AuthApi = api.injectEndpoints({
 		}),
 		modifyServer: builder.mutation<any, any>({
 			query: (arg) => ({
-				url: '/servers?id=' + arg.id,
+				url: '/servers/' + arg.id,
 				method: 'PUT',
-				body: arg.body
+				data: {...arg.body}
 			}),
 			invalidatesTags: ['server']
 		}),
