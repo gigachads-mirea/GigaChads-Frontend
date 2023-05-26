@@ -1,4 +1,5 @@
 export interface IFilterValue {
+    approved: any;
 	name?: string;
 	id?: number;
 }
