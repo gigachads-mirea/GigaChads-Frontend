@@ -5,9 +5,11 @@ import {AuthHeader} from '../../features/auth/widgets/AuthHeader/AuthHeader';
 import {useForm} from 'react-hook-form';
 import styles from './formPage.module.scss';
 import {useAddServerToOwnListMutation, useCreateServerMutation} from '../../features/servers/queries';
+import {useRouter} from 'next/router';
 
 export const FormPage = () => {
 
+	const {push, query} = useRouter();
 	const {register, handleSubmit, setValue} = useForm();
 	const [mutate] = useCreateServerMutation();
 	const [addToOwn] = useAddServerToOwnListMutation();
@@ -22,6 +24,7 @@ export const FormPage = () => {
 			'validated': false,
 		}).then((e: any) => {
 			addToOwn(e?.data?.id);
+			push({pathname: `/server/${e?.data?.id}`, query});
 		});
 	}, []);
 
