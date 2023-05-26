@@ -9,14 +9,5 @@
   ],
   "favourites": [],
   "own": [],
-  "compare": [
-    {
-      "SID": "1",
-      "id": 1
-    },
-    {
-      "SID": "2",
-      "id": 2
-    }
-  ]
+  "compare": []
 }

@@ -19,7 +19,7 @@ export const AccountPage = () => {
 		<PageLayout>
 			<div style={{display: 'flex', gap: '20px', flexWrap: 'wrap'}}>
 				{data && data.map((elem) => {
-					return <ServerGame sid={elem.id}/>;
+					return <ServerGame sid={elem.SID}/>;
 				})}
 			</div>
 		</PageLayout>
@@ -105,7 +105,7 @@ const ServerGame = ({sid}) => {
 						color="success"
 					>
 						<Button auto size="sm" light onClick={() => {
-							navigator.clipboard.writeText('Абобус!');
+							navigator.clipboard.writeText(data[0].host);
 						}}>
 							Поделиться
 						</Button>
@@ -114,7 +114,7 @@ const ServerGame = ({sid}) => {
 						<>
 							{notIsFav && (
 								<Button size="sm" color="secondary" onClick={() => {
-									mutate(query.id);
+									mutate(sid);
 								}}
 								>
 									В избранное
@@ -132,7 +132,7 @@ const ServerGame = ({sid}) => {
 
 							{isCompare && (
 								<Button size="sm" color="success" onClick={() => {
-									addCompare(query.id);
+									addCompare(sid);
 								}}
 								>
 									В сравнение

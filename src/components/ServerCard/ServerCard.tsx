@@ -54,7 +54,7 @@ const ServerCard = ({server}) => {
 							color="success"
 						>
 							<Button auto size="sm" light onClick={() => {
-								navigator.clipboard.writeText('Абобус!');
+								navigator.clipboard.writeText(server.host);
 							}}>
 								Поделиться
 							</Button>
