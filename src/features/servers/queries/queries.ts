@@ -1,5 +1,6 @@
 import {api} from '../../../config/store/api';
 import {IServer} from '../../../config/types';
+import {update} from 'immutable';
 
 const AuthApi = api.injectEndpoints({
 	endpoints: (builder) => ({
@@ -110,6 +111,14 @@ const AuthApi = api.injectEndpoints({
 			}),
 			providesTags: ['server'],
 		}),
+		modifyServer: builder.mutation<any, any>({
+			query: (arg) => ({
+				url: '/servers?id=' + arg.id,
+				method: 'PUT',
+				body: arg.body
+			}),
+			invalidatesTags: ['server']
+		}),
 
 	})
 });
@@ -125,7 +134,7 @@ export const {
 	useAddServerToOwnListMutation,
 	useDeleteServerMutation,
 	useCreateServerMutation,
-
+	useModifyServerMutation,
 	useGetCompareQuery,
 	useAddServerToCompareListMutation,
 	useDeleteServerFromCompareListMutation
