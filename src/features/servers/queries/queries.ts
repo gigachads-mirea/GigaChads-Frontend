@@ -9,7 +9,8 @@ const AuthApi = api.injectEndpoints({
 				method: 'GET',
 				params: {
 					'name_like': arg.filter?.name,
-					'id': arg.filter?.id
+					'id': arg.filter?.id,
+					'approved': arg.filter?.approved
 				}
 			}),
 			providesTags: ['server'],

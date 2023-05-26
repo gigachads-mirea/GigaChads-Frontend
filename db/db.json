@@ -1,5 +1,15 @@
 {
-  "servers": [],
+  "servers": [{
+    "id": 1,
+    "approved": false
+  },
+    {
+      "id": 2,
+      "approved": true
+    },{
+      "id": 3,
+      "approved": false
+    }],
   "users": [
     {
       "id": 1,
