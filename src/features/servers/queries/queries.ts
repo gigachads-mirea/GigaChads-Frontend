@@ -1,10 +1,9 @@
 import {api} from '../../../config/store/api';
 import {IServer} from '../../../config/types';
-import {IFilterValue} from '../widgets/ServersFilter/ServersFilter.types';
 
 const AuthApi = api.injectEndpoints({
 	endpoints: (builder) => ({
-		getServersList: builder.query<IServer[], { filter?: IFilterValue }>({
+		getServersList: builder.query<IServer[], { filter?: any }>({
 			query: (arg) => ({
 				url: '/servers',
 				method: 'GET',

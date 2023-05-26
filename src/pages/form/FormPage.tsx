@@ -23,8 +23,9 @@ export const FormPage = () => {
 			'rating': Math.random() * 10 % 5,
 			'validated': false,
 		}).then((e: any) => {
-			addToOwn(e?.data?.id);
-			push({pathname: `/server/${e?.data?.id}`, query});
+			addToOwn(e?.data?.id).then(() => {
+				push({pathname: `/server/${e?.data?.id}`, query});
+			});
 		});
 	}, []);
 
