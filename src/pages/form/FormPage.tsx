@@ -18,9 +18,9 @@ export const FormPage = () => {
 		mutate({
 			...data,
 			'owner': 'abobus',
-			'currentOnline': Math.random() * 100 % 300,
-			'ping': Math.random() * 100 % 60,
-			'rating': Math.random() * 10 % 5,
+			'currentOnline': Math.ceil(Math.random() * 100 % 300),
+			'ping': Math.ceil(Math.random() * 100 % 60),
+			'rating': Math.ceil(Math.random() * 10 % 5),
 			'validated': false,
 		}).then((e: any) => {
 			addToOwn(e?.data?.id).then(() => {

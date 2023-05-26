@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Input, Text, Tooltip} from '@nextui-org/react';
+import {Button, Input, Switch, Text, Tooltip} from '@nextui-org/react';
 import {IFilterValue, IServersFilterProps} from './ServersFilter.types';
 import styles from './ServersFilter.module.scss';
 import {FILTER_DEFAULT_VALUE} from './ServersFilter.constants';
@@ -17,15 +17,25 @@ export const ServersFilter: React.FC<IServersFilterProps> = (props) => {
 
 	return (
 		<div className={styles.ServersFilter}>
-			<Input clearable placeholder={'Начните вводить'} css={{width: '100%'}} onChange={onTitleChangeHandler}/>
-			<Tooltip placement={'bottom'} content={<Text css={{p: '$10'}}>Тут будут фильтры</Text>}>
-				<Button>Наведи на меня </Button>
-			</Tooltip>
-			<Tooltip
-				placement={'bottom'}
-				content={<Text css={{p: '$10'}}>Тут тоже, а еще справа</Text>}
-			>
-				<Button>И на меня </Button>
+			<Input clearable placeholder={'Начните вводить'} css={{width: '100%'}}
+				   onChange={onTitleChangeHandler}/>
+			<Tooltip placement={'bottom'}
+					 content={<div style={{padding: '15px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
+						 <Input placeholder={'Игра'}></Input>
+						 
+						 <div style={{
+							 display: 'flex',
+							 justifyContent: 'flex-start',
+							 width: '250px',
+							 alignItems: 'center',
+							 gap: '20px',
+						 }}>
+							 <Switch onChange={(ev) => {
+							 }} title={'Античит'}/>
+							 <Text style={{height: '25px'}}>В сети</Text>
+						 </div>
+					 </div>}>
+				<Button>Фильтры</Button>
 			</Tooltip>
 		</div>
 	);
