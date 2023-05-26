@@ -35,7 +35,7 @@ export const Server = () => {
 									<b>Игра:</b> {data[0].game}
 								</Text>
 								<Text>
-									<b>Адрес:</b> {data[0].ipAddress}
+									<b>Адрес:</b> {data[0].host}
 								</Text>
 								<Text>
 									<b>Вместимость:</b> {data[0].capacity}
@@ -67,25 +67,7 @@ export const Server = () => {
 							</Collapse>
 							<Collapse title="Описание">
 								<Text>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dignissimos
-									ducimus enim esse et excepturi harum illum inventore natus numquam officia officiis,
-									omnis perspiciatis qui sapiente soluta tenetur velit vero! Aliquam commodi eveniet
-									excepturi maiores non possimus rem? Aperiam consectetur error facere libero magnam
-									nihil odio praesentium! Asperiores assumenda culpa cupiditate distinctio dolore
-									earum, eveniet explicabo facilis hic incidunt libero maxime nisi porro quam
-									repudiandae sapiente sit tempora tenetur velit, veniam voluptatem voluptatibus,
-									voluptatum. Ab ad adipisci aliquam, atque consequuntur delectus dolores eaque earum
-									et eveniet expedita explicabo hic ipsum labore laboriosam maiores natus non
-									obcaecati officiis perferendis placeat rem repellendus saepe sequi sit sunt unde
-									vitae! Animi, at beatae blanditiis consectetur consequatur consequuntur deleniti
-									dicta dignissimos dolore, enim error, est eveniet hic inventore ipsam itaque labore
-									laboriosam laborum libero magnam maiores minima minus nemo pariatur perspiciatis
-									quae quaerat qui quis repudiandae rerum ullam vero vitae voluptate? A asperiores at
-									eaque id impedit ipsa iusto libero magnam maxime quae quidem, similique tempore
-									voluptatum! Blanditiis error eveniet impedit ipsum minus mollitia, numquam quisquam
-									quod velit veritatis! Accusantium ad architecto aspernatur consequatur delectus
-									ducimus magni mollitia necessitatibus nemo omnis optio, quas quia quo quod
-									repellendus sunt vel voluptatum! Inventore iste praesentium rem?
+									{data[0].description}
 								</Text>
 							</Collapse>
 						</Collapse.Group>

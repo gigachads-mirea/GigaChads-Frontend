@@ -1,70 +1,5 @@
 {
-  "servers": [
-    {
-      "id": 3,
-      "owner": "Kopatych2002",
-      "ipAddress": "127.0.0.3",
-      "name": "Super server 3",
-      "url": "https://nextjs.org/blog/layouts-rfc",
-      "capacity": 4000,
-      "currentOnline": 27,
-      "region": "RU",
-      "ping": 67,
-      "antiCheat": true,
-      "isModded": true,
-      "rating": 4.1,
-      "game": "Minecraft",
-      "validated": true
-    },
-    {
-      "id": 4,
-      "owner": "Kopatych2002",
-      "ipAddress": "127.0.0.4",
-      "name": "Super server 6",
-      "url": "https://nextjs.org/blog/layouts-rfc",
-      "capacity": 4000,
-      "currentOnline": 27,
-      "region": "RU",
-      "ping": 67,
-      "antiCheat": true,
-      "isModded": true,
-      "rating": 4.1,
-      "game": "Minecraft",
-      "validated": true
-    },
-    {
-      "id": 5,
-      "name": "Super server 1",
-      "owner": "Kopatych2002",
-      "url": "https://nextjs.org/blog/layouts-rfc",
-      "ipAddress": "127.0.0.6",
-      "capacity": 4000,
-      "currentOnline": 27,
-      "region": "RU",
-      "ping": 22,
-      "antiCheat": true,
-      "isModded": true,
-      "rating": 4.1,
-      "game": "Krunker",
-      "validated": false
-    },
-    {
-      "id": 6,
-      "name": "Super server 1",
-      "owner": "Kopatych2002",
-      "url": "https://nextjs.org/blog/layouts-rfc",
-      "ipAddress": "127.0.0.6",
-      "capacity": 4000,
-      "currentOnline": 27,
-      "region": "RU",
-      "ping": 22,
-      "antiCheat": true,
-      "isModded": true,
-      "rating": 4.1,
-      "game": "Krunker",
-      "validated": false
-    }
-  ],
+  "servers": [],
   "users": [
     {
       "id": 1,
@@ -72,11 +7,6 @@
       "email": "abobov@mail.ru"
     }
   ],
-  "favourites": [
-    {
-      "SID": "4",
-      "id": 1
-    }
-  ],
+  "favourites": [],
   "own": []
 }

@@ -13,7 +13,7 @@ const UserServers = () => {
 	const [deleteServerFromList, {}] = useDeleteServerFromOwnListMutation();
 	const {data} = useGetOwnsQuery('');
 	const [updateUserServersList, {}] = useAddServerToOwnListMutation();
-
+	console.log(data, 'data');
 	return (
 		<Grid xs={4}>
 			<Card css={{height: '80vh'}}>
@@ -22,7 +22,7 @@ const UserServers = () => {
 				<Card.Body>
 					<Grid.Container gap={2} justify="flex-start">
 						{data && data.map((elem) => {
-							return <ServerGame sid={elem.SID}/>;
+							return <ServerGame sid={elem?.SID} id={elem.id}/>;
 						})}
 					</Grid.Container>
 				</Card.Body>
@@ -33,15 +33,17 @@ const UserServers = () => {
 
 export default UserServers;
 
-const ServerGame = ({sid}) => {
+const ServerGame = ({sid, id}) => {
 	const {data} = useGetServersListQuery({filter: {id: sid}});
 	const [deleteOwn] = useDeleteServerFromOwnListMutation();
 	const [deleteServer] = useDeleteServerMutation();
 
 	if (!data) return null;
 
+	console.log(data);
+
 	return <UserServerCard elem={data[0]} deleteServer={() => {
-		deleteOwn(data[0].id).then(() => {
+		deleteOwn(id).then(() => {
 			deleteServer(sid);
 		});
 	}}/>;

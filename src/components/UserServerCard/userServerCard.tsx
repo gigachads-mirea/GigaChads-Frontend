@@ -5,6 +5,8 @@ import {useRouter} from 'next/router';
 const UserServerCard = ({elem, deleteServer}) => {
 	const {query, push} = useRouter();
 
+
+	if (!elem) return undefined;
 	const goToPage = (pathname: string) => () => push({pathname, query});
 	return (
 		<Grid xs={8}>

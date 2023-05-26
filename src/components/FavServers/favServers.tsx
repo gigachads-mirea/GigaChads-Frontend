@@ -18,7 +18,7 @@ const FavServers = () => {
 				<Card.Body>
 					<Grid.Container gap={2} justify="flex-start">
 						{data && data.map((elem) => {
-							return <ServerGame sid={elem.SID}/>;
+							return <ServerGame sid={elem.SID} id={elem.id}/>;
 						})}
 					</Grid.Container>
 				</Card.Body>
@@ -29,13 +29,13 @@ const FavServers = () => {
 
 export default FavServers;
 
-const ServerGame = ({sid}) => {
+const ServerGame = ({sid, id}) => {
 	const {data} = useGetServersListQuery({filter: {id: sid}});
 	const [deleteFav] = useDeleteServerFromFavouriteListMutation();
 
 	if (!data) return null;
 
 	return <UserServerCard elem={data[0]} deleteServer={() => {
-		deleteFav(data[0].id);
+		deleteFav(id);
 	}}/>;
 };

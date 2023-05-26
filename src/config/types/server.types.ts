@@ -5,7 +5,7 @@ export interface IServer {
 	name: ReactNode;
 	id: number;
 	owner: string;
-	ipAddress: string;
+	host: string;
 	capacity: number;
 	currentOnline: number;
 	region: string;
@@ -15,5 +15,6 @@ export interface IServer {
 	rating: number;
 	game: string;
 	validated: boolean;
+	description: string;
 
 }
