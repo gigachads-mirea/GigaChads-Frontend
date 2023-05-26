@@ -1,6 +1,5 @@
 import {api} from '../../../config/store/api';
 import {IServer} from '../../../config/types';
-import {update} from 'immutable';
 
 const AuthApi = api.injectEndpoints({
 	endpoints: (builder) => ({
@@ -11,7 +10,7 @@ const AuthApi = api.injectEndpoints({
 				params: {
 					'name_like': arg.filter?.name,
 					'id': arg.filter?.id,
-					'approved': arg.filter?.approved
+					'validated': arg.filter?.validated,
 				}
 			}),
 			providesTags: ['server'],

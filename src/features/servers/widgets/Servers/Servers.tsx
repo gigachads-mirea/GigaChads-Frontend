@@ -7,7 +7,7 @@ import {FILTER_DEFAULT_VALUE} from '../ServersFilter/ServersFilter.constants';
 
 export const Servers = () => {
 	const [filter, setFilter] = React.useState(FILTER_DEFAULT_VALUE);
-	const {data: servers} = useGetServersListQuery({filter});
+	const {data: servers} = useGetServersListQuery({filter: {...filter, validated: true}});
 	return (
 		<div className={styles.Servers}>
 			<ServersFilter onChange={setFilter}/>

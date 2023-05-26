@@ -1,16 +1,34 @@
 {
   "servers": [
     {
-      "id": 1,
-      "approved": true
+      "name": "fdsf",
+      "game": "dsf",
+      "url": "fdsf",
+      "host": "",
+      "capacity": "",
+      "login": "",
+      "description": "",
+      "owner": "abobus",
+      "currentOnline": 19,
+      "ping": 23,
+      "rating": 5,
+      "validated": true,
+      "id": 1
     },
     {
-      "id": 2,
-      "approved": true
-    },
-    {
-      "id": 3,
-      "approved": true
+      "name": "fsdfdsf",
+      "game": "",
+      "url": "",
+      "host": "",
+      "capacity": "",
+      "login": "",
+      "description": "",
+      "owner": "abobus",
+      "currentOnline": 6,
+      "ping": 40,
+      "rating": 2,
+      "validated": false,
+      "id": 2
     }
   ],
   "users": [
@@ -20,7 +38,38 @@
       "email": "abobov@mail.ru"
     }
   ],
-  "favourites": [],
-  "own": [],
-  "compare": []
+  "favourites": [
+    {
+      "SID": "4",
+      "id": 1
+    }
+  ],
+  "own": [
+    {
+      "SID": 4,
+      "id": 1
+    },
+    {
+      "SID": 5,
+      "id": 2
+    },
+    {
+      "SID": 1,
+      "id": 3
+    },
+    {
+      "SID": 1,
+      "id": 4
+    },
+    {
+      "SID": 2,
+      "id": 5
+    }
+  ],
+  "compare": [
+    {
+      "SID": "4",
+      "id": 1
+    }
+  ]
 }

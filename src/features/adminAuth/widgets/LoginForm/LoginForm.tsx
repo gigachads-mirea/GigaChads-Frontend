@@ -21,7 +21,7 @@ export const LoginForm = () => {
 					query: {
 						logged: '1'
 					},
-					pathname: 'account'
+					pathname: 'profile'
 				});
 			}}>Войти</Button>
 		</form>
