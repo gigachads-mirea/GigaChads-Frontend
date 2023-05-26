@@ -91,7 +91,7 @@ export const Server = () => {
 								color="success"
 							>
 								<Button auto size="sm" light onClick={() => {
-									navigator.clipboard.writeText('Абобус!');
+									navigator.clipboard.writeText(data[0].host);
 								}}>
 									Поделиться
 								</Button>
