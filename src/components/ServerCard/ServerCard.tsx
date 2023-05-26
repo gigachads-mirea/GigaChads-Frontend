@@ -24,7 +24,7 @@ const ServerCard = ({server}) => {
 						<Text b>
 							Ip address:
 						</Text>
-						{' ' + server.ipAddress}
+						{' ' + server.host}
 					</Text>
 					<Text>
 						<Text b>

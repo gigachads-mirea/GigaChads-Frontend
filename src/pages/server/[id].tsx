@@ -4,8 +4,11 @@ import {Button, Card, Collapse, Container, Row, Text, Tooltip} from '@nextui-org
 import {AuthHeader} from '../../features/auth/widgets/AuthHeader/AuthHeader';
 import React from 'react';
 import {
+	useAddServerToCompareListMutation,
 	useAddServerToFavouriteListMutation,
+	useDeleteServerFromCompareListMutation,
 	useDeleteServerFromFavouriteListMutation,
+	useGetCompareQuery,
 	useGetFavouritesQuery,
 	useGetServersListQuery
 } from '../../features/servers/queries';
@@ -18,6 +21,14 @@ export const Server = () => {
 	const {data: faves} = useGetFavouritesQuery(query.id ?? '');
 	const notIsFav = faves?.length === 0;
 	const [deleteFav] = useDeleteServerFromFavouriteListMutation();
+
+	const {data: compareList} = useGetCompareQuery(query.id ?? '');
+	const [deleteCompare] = useDeleteServerFromCompareListMutation();
+	const [addCompare] = useAddServerToCompareListMutation();
+
+	const isCompare = compareList?.length === 0;
+
+
 	return (
 		<PageLayout>
 			<Container fluid justify={'center'} css={{display: 'flex'}}>
@@ -73,7 +84,7 @@ export const Server = () => {
 						</Collapse.Group>
 					</Card.Body>
 					<Card.Footer>
-						<Row justify="flex-end">
+						<Row justify="flex-end" style={{display: 'flex', gap: '10px'}}>
 							<Tooltip
 								content={'Текст скопирован'}
 								trigger="click"
@@ -102,6 +113,24 @@ export const Server = () => {
 										}}
 										>
 											Удалить из избранного
+										</Button>
+									)}
+
+									{isCompare && (
+										<Button size="sm" color="success" onClick={() => {
+											addCompare(query.id);
+										}}
+										>
+											В сравнение
+										</Button>
+									)}
+
+									{!isCompare && (
+										<Button size="sm" color="success" onClick={() => {
+											deleteCompare(compareList[0].id);
+										}}
+										>
+											Удалить сравнения
 										</Button>
 									)}
 								</>

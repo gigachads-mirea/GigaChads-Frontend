@@ -20,7 +20,7 @@ const UserServerCard = ({elem, deleteServer}) => {
 						Game: {elem.game}
 					</Text>
 					<Text>
-						IP: {elem.ipAddress}
+						IP: {elem.host}
 					</Text>
 				</Card.Body>
 				<Card.Divider/>

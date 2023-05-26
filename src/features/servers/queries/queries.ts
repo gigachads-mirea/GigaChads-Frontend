@@ -38,6 +38,7 @@ const AuthApi = api.injectEndpoints({
 			}),
 			providesTags: ['server'],
 		}),
+
 		addServerToFavouriteList: builder.mutation<any, any>({
 			query: (params) => ({
 				url: '/favourites',
@@ -61,6 +62,7 @@ const AuthApi = api.injectEndpoints({
 			}),
 			providesTags: ['server'],
 		}),
+
 		addServerToOwnList: builder.mutation<any, any>({
 			query: (params) => ({
 				url: '/own',
@@ -84,6 +86,31 @@ const AuthApi = api.injectEndpoints({
 			providesTags: ['server'],
 		}),
 
+
+		addServerToCompareList: builder.mutation<any, any>({
+			query: (params) => ({
+				url: '/compare',
+				method: 'POST',
+				data: {SID: params}
+			}),
+			invalidatesTags: ['server']
+		}),
+		deleteServerFromCompareList: builder.mutation<any, any>({
+			query: (arg) => ({
+				url: '/compare/' + arg,
+				method: 'DELETE',
+			}),
+			invalidatesTags: ['server']
+		}),
+		getCompare: builder.query<any, any>({
+			query: (arg) => ({
+				url: '/compare/',
+				method: 'GET',
+				params: arg && {SID: arg}
+			}),
+			providesTags: ['server'],
+		}),
+
 	})
 });
 
@@ -97,5 +124,9 @@ export const {
 	useDeleteServerFromOwnListMutation,
 	useAddServerToOwnListMutation,
 	useDeleteServerMutation,
-	useCreateServerMutation
+	useCreateServerMutation,
+
+	useGetCompareQuery,
+	useAddServerToCompareListMutation,
+	useDeleteServerFromCompareListMutation
 } = AuthApi;
